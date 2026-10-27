@@ -2,6 +2,9 @@
 
 [aria2c](https://aria2.github.io) with a window. Paste a link — or a whole `aria2c` command line — pick connections and a folder, and download.
 
+> [!IMPORTANT]
+> **Fetch needs aria2c.** It's a window for [aria2](https://aria2.github.io) and doesn't include it. Install it first with [Homebrew](https://brew.sh): `brew install aria2` ([formula](https://formulae.brew.sh/formula/aria2)), or with MacPorts: `sudo port install aria2`. Without it Fetch opens but shows “aria2c isn't installed”.
+
 ![Fetch with two downloads in progress and finished ones below](docs/downloads.png)
 
 <img src="docs/settings.png" width="420" alt="Fetch's settings: downloads at once, speed limit, cookies, seeding, notifications, aria2c options">
@@ -15,11 +18,11 @@
 ## Requirements
 
 - macOS 26 or later.
-- **aria2c**. Fetch is only a front end and doesn't include it. Install it with [Homebrew](https://brew.sh): `brew install aria2` (MacPorts' `aria2` works too). Fetch looks in `/opt/homebrew/bin`, `/usr/local/bin` and `/opt/local/bin`.
+- **aria2c** ([aria2](https://aria2.github.io), [releases](https://github.com/aria2/aria2/releases/latest)). Fetch is only a front end and doesn't include it. Install it with [Homebrew](https://brew.sh): `brew install aria2`, or MacPorts: `sudo port install aria2`. Fetch looks in `/opt/homebrew/bin`, `/usr/local/bin` and `/opt/local/bin`.
 
 ## Install
 
-Fetch needs aria2c, so install that first: `brew install aria2` (with [Homebrew](https://brew.sh)).
+Install aria2c first: `brew install aria2` (needs [Homebrew](https://brew.sh)).
 
 **Download:** get [Fetch.zip](https://github.com/byaydenrx/Fetch/releases/latest/download/Fetch.zip) from the [latest release](https://github.com/byaydenrx/Fetch/releases/latest) (Apple silicon and Intel, macOS 26 or later).
 

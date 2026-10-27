@@ -9,12 +9,15 @@ final class Aria2 {
 
         var errorDescription: String? {
             switch self {
-            case .notInstalled: return "aria2c isn't installed. Install it with: brew install aria2"
+            case .notInstalled: return "Fetch needs aria2c, which isn't installed. Install it with: brew install aria2"
             case .exited(let message): return message.isEmpty ? "aria2c stopped unexpectedly." : message
             case .rpc(let message): return message
             }
         }
     }
+
+    /// Homebrew's aria2 page: the install command, and what aria2 is.
+    static let installHelp = URL(string: "https://formulae.brew.sh/formula/aria2")!
 
     /// The aria2c binary: Homebrew on Apple silicon or Intel, MacPorts, or anything on PATH.
     static func binary() -> URL? {

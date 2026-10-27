@@ -401,6 +401,9 @@ struct Footer: View {
                 if let problem = store.problem {
                     Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.yellow)
                     Text(problem).lineLimit(2).foregroundStyle(.primary.opacity(0.85)).help(problem)
+                    if problem == Aria2.Failure.notInstalled.errorDescription {
+                        Link("How to Install", destination: Aria2.installHelp)
+                    }
                     Button { store.problem = nil } label: { Image(systemName: "xmark") }.buttonStyle(.borderless)
                 } else if !active.isEmpty {
                     Text("\(active.count) downloading · ↓ \(Format.bytes(speed))/s")
