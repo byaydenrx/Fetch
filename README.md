@@ -19,16 +19,24 @@
 
 ## Install
 
+Fetch needs aria2c, so install that first: `brew install aria2` (with [Homebrew](https://brew.sh)).
+
+**Download:** get [Fetch.zip](https://github.com/byaydenrx/Fetch/releases/latest/download/Fetch.zip) from the [latest release](https://github.com/byaydenrx/Fetch/releases/latest) (Apple silicon and Intel, macOS 26 or later).
+
+1. Double-click `Fetch.zip` to unzip it, and drag **Fetch** into your Applications folder.
+2. Open it. Because the app isn't notarized by Apple, macOS says it can't verify it: click **Done**.
+3. Open System Settings › Privacy & Security, scroll down to “Fetch was blocked”, click **Open Anyway** and confirm. You only do this once.
+
+**Or build it yourself** (no Gatekeeper prompt), with Swift 6 from the Xcode Command Line Tools (`xcode-select --install`) or Xcode:
+
 ```sh
 brew install aria2
-git clone https://github.com/Byaydenrx/Fetch.git
+git clone https://github.com/byaydenrx/Fetch.git
 cd Fetch
 ./install.sh
 ```
 
-`install.sh` builds Fetch from source, copies it to `~/Applications` and opens it. To only build: `./build.sh` makes `build/Fetch.app` (universal: Apple silicon and Intel). Either needs Swift 6 from the Xcode Command Line Tools (`xcode-select --install`) or Xcode.
-
-Downloaded builds aren't notarized, so macOS blocks them the first time: System Settings › Privacy & Security › **Open Anyway**. Building it yourself avoids that.
+`install.sh` builds Fetch, copies it to `~/Applications` and opens it. `./build.sh` only builds `build/Fetch.app`.
 
 ## How it works
 
