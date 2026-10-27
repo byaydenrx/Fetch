@@ -2,6 +2,10 @@
 
 [aria2c](https://aria2.github.io) with a window. Paste a link — or a whole `aria2c` command line — pick connections and a folder, and download.
 
+![Fetch with two downloads in progress and finished ones below](docs/downloads.png)
+
+<img src="docs/settings.png" width="420" alt="Fetch's settings: downloads at once, speed limit, cookies, seeding, notifications, aria2c options">
+
 - Links, mirrors, magnets, `.torrent` and `.metalink` files (drop them on the window or open them with Fetch).
 - Anything aria2c understands: `-x 8`, `-o name.zip`, `--header "…"`, `-Z`, `-i list.txt`, `--max-overall-download-limit=2M` …
 - Connections per server, concurrent downloads, speed limit, seeding on/off, notifications.
